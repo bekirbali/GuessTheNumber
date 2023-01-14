@@ -9,6 +9,8 @@ lifeCount.after(guess);
 const button = document.querySelector(".btn");
 const span = document.getElementsByTagName("span");
 
+let max = 100;
+let min = 1;
 let counter = 0;
 let life = 5;
 button.addEventListener("click", () => {
@@ -28,13 +30,15 @@ button.addEventListener("click", () => {
       window.location.reload();
     } else if (value < random) {
       console.log("Enter a higher number");
-      guess.innerHTML = `Number is higher than -> ${value}`;
+      min = value;
+      guess.innerHTML = `Number is between -> ${min} and ${max}`;
       counter += 1;
       life -= 1;
       span[0].innerHTML = ` ${counter}`;
     } else if (value > random) {
       console.log("Enter a lower number");
-      guess.innerHTML = `Number is lower than -> ${value}`;
+      max = value;
+      guess.innerHTML = `Number is between -> ${min} and ${max}`;
       counter += 1;
       life -= 1;
       span[0].innerHTML = counter;
@@ -66,13 +70,15 @@ inp.addEventListener("keydown", (e) => {
         window.location.reload();
       } else if (value < random) {
         console.log("Enter a higher number");
-        guess.innerHTML = `Number is higher than -> ${value}`;
+        min = value;
+        guess.innerHTML = `Number is between -> ${min} and ${max}`;
         counter += 1;
         life -= 1;
         span[0].innerHTML = ` ${counter}`;
       } else if (value > random) {
         console.log("Enter a lower number");
-        guess.innerHTML = `Number is lower than -> ${value}`;
+        max = value;
+        guess.innerHTML = `Number is between -> ${min} and ${max}`;
         counter += 1;
         life -= 1;
         span[0].innerHTML = counter;
