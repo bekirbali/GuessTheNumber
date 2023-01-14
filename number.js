@@ -17,7 +17,7 @@ button.addEventListener("click", () => {
     alert("Add a Number");
   } else {
     if (value > 100 || value < 0) {
-      console.log("Enter a number between 1-100");
+      alert("Enter a number between 1-100");
     } else if (value === random) {
       alert(`You guessed right, number was ${value}`);
       setTimeout(() => {
@@ -55,7 +55,7 @@ inp.addEventListener("keydown", (e) => {
       alert("Add a Number");
     } else {
       if (value > 100 || value < 0) {
-        console.log("Enter a number between 1-100");
+        alert("Enter a number between 1-100");
       } else if (value === random) {
         alert(`You guessed right, number was ${value}`);
         setTimeout(() => {
