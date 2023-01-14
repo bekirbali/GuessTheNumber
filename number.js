@@ -39,7 +39,7 @@ button.addEventListener("click", () => {
       life -= 1;
       span[0].innerHTML = counter;
     } else {
-      console.log("Input has to be a number");
+      alert("Input has to be a number");
     }
   }
   inp.value = "";
@@ -77,7 +77,7 @@ inp.addEventListener("keydown", (e) => {
         life -= 1;
         span[0].innerHTML = counter;
       } else {
-        console.log("Input has to be a number");
+        alert("Input has to be a number");
       }
     }
     inp.value = "";
