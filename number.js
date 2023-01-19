@@ -7,7 +7,8 @@ const guess = document.createElement("h3");
 h3.after(lifeCount);
 lifeCount.after(guess);
 const button = document.querySelector(".btn");
-const span = document.getElementsByTagName("span");
+const span = document.getElementById("attempts");
+console.log(span);
 
 let max = 100;
 let min = 1;
@@ -34,14 +35,14 @@ button.addEventListener("click", () => {
       guess.innerHTML = `Number is between -> ${min} and ${max}`;
       counter += 1;
       life -= 1;
-      span[0].innerHTML = ` ${counter}`;
+      span.innerHTML = ` ${counter}`;
     } else if (value > random) {
       console.log("Enter a lower number");
       max = value;
       guess.innerHTML = `Number is between -> ${min} and ${max}`;
       counter += 1;
       life -= 1;
-      span[0].innerHTML = counter;
+      span.innerHTML = counter;
     } else {
       alert("Input has to be a number");
     }
