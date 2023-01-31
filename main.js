@@ -49,3 +49,7 @@ button.addEventListener("click", (e) => {
   inp.focus();
   lifeCount.innerHTML = `Remaining Life: ${life}`;
 });
+
+window.addEventListener("load", () => {
+  inp.focus();
+});
